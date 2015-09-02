@@ -28,7 +28,11 @@
 				var venueNames = [];
 				for (var i = 0; i < venueItems.length; i++) {
 					venueNames.push({
-						name : venueItems[i].venue.name
+						name : venueItems[i].venue.name,
+						address: venueItems[i].venue.location.address,
+						city: venueItems[i].venue.location.city,
+						country: venueItems[i].venue.location.country
+						
 					});
 				}
 				return venueNames;

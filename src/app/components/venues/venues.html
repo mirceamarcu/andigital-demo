@@ -1,6 +1,8 @@
-<input type="text" ng-model="near" />
-<button ng-click="getNearVenues(near)">Get near venues</button>
+<form>	
+	<input type="text" ng-model="near" />
+	<button ng-click="getNearVenues(near)">Get near venues</button>
+</form>
 
-<div ng-repeat="item in venueName">
-	{{item.name}}
+<div ng-repeat="venue in venueData">
+	{{venue.name}} - {{venue.address}}, {{venue.city}}, {{venue.country}}
 </div>

@@ -22,7 +22,7 @@
 			link: function(scope) {
 				scope.getNearVenues = function(near) {
 					venuesModel.getVenueItems(near).then(function(venues){
-						scope.venueName = venues;
+						scope.venueData = venues;
 					});
 				}
 				
