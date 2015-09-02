@@ -1,0 +1,37 @@
+{
+  "name": "andigital-demo",
+  "version": "0.0.1",
+  "description": "demo app",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mirceamarcu/andigital-demo.git"
+  },
+  "keywords": [
+    "test",
+    "demo"
+  ],
+  "author": "Marcu Mircea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirceamarcu/andigital-demo/issues"
+  },
+  "homepage": "https://github.com/mirceamarcu/andigital-demo",
+  "dependencies": {
+    "bower": "^1.5.2",
+    "gulp": "^3.9.0",
+    "gulp-uglifyjs": "^0.6.2"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^3.0.1",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-webserver": "^0.9.1",
+    "main-bower-files": "^2.9.0"
+  }
+}
