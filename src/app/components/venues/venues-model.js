@@ -7,7 +7,7 @@
 
     VenuesModel.$inject = ['$http', 'API', '$q', 'mapManager'];
 
-    VenuesModel($http, API, promise, mapManager) { 
+    function VenuesModel($http, API, promise, mapManager) { 
 
       this.getList = function(near) {
       var venueList;
@@ -17,13 +17,13 @@
           return resolve(proccesRawVenueData(venueList));
         });
       });
-    }
+    };
 
-  };
+  }
 
   function concatCredentials(API) {
     return API.url+'&client_id='+API.clientID+'&client_secret='+API.clientSecret;
-  };
+  }
 
   function proccesRawVenueData(venueItems) {
     var venuesList = [];
@@ -36,7 +36,7 @@
         lat: venueItems[i].venue.location.lat,
         lng: venueItems[i].venue.location.lng
       });
-    }
+    };
     return venuesList;
   }
 
