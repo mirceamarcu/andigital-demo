@@ -57,7 +57,7 @@ The module is build out of 3 main files:
 
 Here is the model of our venus logic. The model handles the data which comes from the API. The data is fetched via a `GET` request to the API, based on the location entered in the view's input. The data is then processed into an array wich contains only the bare minimum for us to render the map: `longitute`, `latitude`, `name` etc.
 
-To retrive the venu array, the model exposes this function: ```venuModel.getItems('Luxemburg');```
+To retrive the venu array, the model exposes this function: ```venuModel.getList('Luxemburg');```
 
 ##### venues-controller.js
 
@@ -69,5 +69,5 @@ This is the venus HTML where we initiate the controller and show the search inpu
 
 ### Main files
 
-The whole app is fired up in the `app.js` file. Which inclues the `map` and `venues` components and the main view is `index.html` which initiates the Angular app with the `ng-app` attribute.
+The whole app is fired up in the `app.js` file. Which inclues the and `venues` component and the main view is `index.html` which initiates the Angular app with the `ng-app` attribute.
 
