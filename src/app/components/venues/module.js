@@ -2,12 +2,12 @@
 	'use strict';
 	
 	angular
-		.module('venues', [])
+		.module('venues', ['maps'])
 		.service('venuesModel', VenuesModel);
 		
-		VenuesModel.$inject = ['$http', 'API', '$q'];
+		VenuesModel.$inject = ['$http', 'API', '$q', 'mapManager'];
 	
-		function VenuesModel($http, API, promise) { 
+		function VenuesModel($http, API, promise, mapManager) { 
 			
 			this.getList = function(near) {
 				return $http.get(concatCredentials(API)+'&near='+near);
@@ -19,23 +19,25 @@
 				return promise(function(resolve){
 					self.getList(near).success(function(result) {
 						venueList = result.response.groups[0].items;
+						mapManager.addPointers(self.getVenueData(venueList));
 						return resolve(self.getVenueData(venueList));
 					});
 				});
 			}
 			
 			this.getVenueData = function(venueItems) {
-				var venueNames = [];
+				var venuesList = [];
 				for (var i = 0; i < venueItems.length; i++) {
-					venueNames.push({
+					venuesList.push({
 						name : venueItems[i].venue.name,
 						address: venueItems[i].venue.location.address,
 						city: venueItems[i].venue.location.city,
-						country: venueItems[i].venue.location.country
-						
+						country: venueItems[i].venue.location.country,
+						lat: venueItems[i].venue.location.lat,
+						lng: venueItems[i].venue.location.lng
 					});
 				}
-				return venueNames;
+				return venuesList;
 			}
 			
 		};

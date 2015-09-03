@@ -19,7 +19,9 @@
 		return {
 			templateUrl: 'app/components/venues/venues.html',
 			restrict: 'E',
+			replace: true,
 			link: function(scope) {
+				
 				scope.getNearVenues = function(near) {
 					venuesModel.getVenueItems(near).then(function(venues){
 						scope.venueData = venues;
