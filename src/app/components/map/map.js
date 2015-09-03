@@ -17,7 +17,7 @@
 			link: function(scope, element) {
 				google.maps.event.addDomListener(window, 'load', initialize.bind(null, element[0].childNodes[0]));
 				
-				scope.$on('add-pointers', function(e, venuesList){
+				scope.$on('map:add:pointers', function(e, venuesList){
 					clearMarkers();
 					
 					var centerLat = venuesList[0].lat,

@@ -8,7 +8,7 @@
 	
 		function MapManager($rootScope) {
 			this.addPointers = function(venuesList) {
-				$rootScope.$broadcast('add-pointers', venuesList);
+				$rootScope.$broadcast('map:add:pointers', venuesList);
 			};
 		};
 	
