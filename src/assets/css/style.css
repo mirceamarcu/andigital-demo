@@ -1,74 +1,70 @@
 body{
-	width: 100%;
-	height: 100%;
-	margin: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 } 
 
-.venues-widget{
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
+  .venues-widget{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
 
-	.venues-search{
-		width: 100%;
-		height: 50px;
-		background: rgba(0, 0, 0, 0.6);
-		position: absolute;
-		left: 0;
-		top: 0;
-		z-index:10;
-	}
+    .venues-search{
+      width: 100%;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index:10;
+    }
 
-		.venues-form{
-			width: 30%;
-			position: relative;
-			margin: 10px auto 0;
-		}
+      .venues-form{
+        width: 30%;
+        position: relative;
+        margin: 10px auto 0;
+      }
 
-			.venues-form input[type="text"]{
-				width: 100%;
-				height: 30px;
-				background: #f2f2f2;
-				position: relative;
-				padding: 0 10px;
-				border: 1px solid #000;
-				font-family: Verdana;
-				color: #000;
-				z-index: 5;
-			}
+        .venues-form input[type="text"]{
+          width: 100%;
+          height: 30px;
+          background: #f2f2f2;
+          position: relative;
+          padding: 0 10px;
+          border: 1px solid #000;
+          font-family: Verdana;
+          color: #000;
+          z-index: 5;
+        }
 
-			.venues-form button{
-				width: 28px;
-				height:28px;
-				background: none;
-				border: 0;
-				position: absolute;
-				right: 0;
-				top: 0;
-				margin: 0;
-				padding: 0;
-				font-size: 20px;
-				z-index: 10;
-			}
+        .venues-form button{
+          width: 28px;
+          height:28px;
+          background: none;
+          border: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          margin: 0;
+          padding: 0;
+          font-size: 20px;
+          z-index: 10;
+        }
 
-	.map{
-		width: 100%;
-		height: 100%;
-		position: fixed;
-		left: 0;
-		top: 0;
-		z-index:5
-	}
-
-	#map{
-		height: 100%;
-	}
+  .map{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index:5
+  }
 
 @media only screen and (max-width: 767px) {
-	.venues-form{
-			width: 90%;
-			position: relative;
-			margin: 10px auto 0;
-		}
+  .venues-form{
+    width: 90%;
+    position: relative;
+    margin: 10px auto 0;
+  }
 }

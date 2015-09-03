@@ -2,23 +2,23 @@
 <html>
 <head>
 <title>ANDigital demo</title>
-	
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	
-	<link rel="stylesheet" href="bundle/vendor.css" />
-	<link rel="stylesheet" href="bundle/styles.css" />
-	
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <link rel="stylesheet" href="bundle/vendor.css" />
+  <link rel="stylesheet" href="bundle/styles.css" />
+
 </head>
 
 <body ng-app="andigital-demo">
-	
-	<venues></venues>
-	<map></map>
-	
-	<script src="bundle/vendor.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js"></script>
-	<script src="bundle/bundle.js"></script>
-	
+
+  <ng-include src="'/app/components/venues/venues.html'"></ng-include>
+  <map></map>
+
+  <script src="bundle/vendor.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="bundle/bundle.js"></script>
+
 </body>
 
 </html>

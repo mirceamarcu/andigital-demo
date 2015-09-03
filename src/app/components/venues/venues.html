@@ -1,8 +1,8 @@
 <div class="venues-widget">	
-	<div class="venues-search">
-		<form class="venues-form">	
-			<input type="text" ng-model="near" placeholder="Enter location to get near venues" />
-			<button ng-click="getNearVenues(near)">&raquo;</button>
-		</form>
-	</div>
+  <div class="venues-search">
+    <form class="venues-form" ng-controller="VenuesController as ctrl">	
+      <input type="text" ng-model="near" placeholder="Enter location to get near venues" />
+      <button ng-click="ctrl.getNearVenues(near)">&raquo;</button>
+    </form>
+  </div>
 </div>

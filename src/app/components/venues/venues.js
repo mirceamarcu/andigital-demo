@@ -11,23 +11,18 @@
 
   venues.constant('API', foursquare);
 
-  venues.directive('venues', venuesDirective);
+  venues.controller('VenuesController', VenuesController);
 
-  venuesDirective.$inject = ['venuesModel'];
+  VenuesController.$inject = ['venuesModel', 'mapManager'];
 
-  function venuesDirective(venuesModel) {
-    return {
-      templateUrl: 'app/components/venues/venues.html',
-      restrict: 'E',
-      replace: true,
-      link: function(scope) {
-
-        scope.getNearVenues = function(near) {
-          venuesModel.getVenueItems(near).then(function(venues){
-            scope.venueData = venues;
-          });
-        }
-      }
+  function VenuesController(venuesModel, mapManager) {
+    var self = this;
+    self.getNearVenues = function(near) {
+      venuesModel.getList(near).then(function(venues){
+        self.venueData = venues;
+        mapManager.addPointers(venues);
+      });
     }
   }
+
 })();
